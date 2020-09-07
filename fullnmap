@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "#============================# "
-echo "#tool made by anoniskey      #"
+echo "#tool made by kidd234        #"
 echo "#============================#"
 echo "enter ip for a full nmap stealth scan"
 read ip
