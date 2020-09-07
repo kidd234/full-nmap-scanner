@@ -1,0 +1,34 @@
+#!/bin/bash
+echo "#============================# "
+echo "#tool made by anoniskey      #"
+echo "#============================#"
+echo "enter ip for a full nmap stealth scan"
+read ip
+echo "would you like to save the file "
+echo "1 yes"
+echo "2 no"
+read save  
+
+if [ $save -eq 2 ]; then
+    full_nmap="sudo nmap -P -sV -Pn -A -O $ip --osscan-limit"
+    $full_nmap 
+    echo "#############################"
+    echo "#now you know everything you#"
+    echo "#need to know about         #"
+    echo "#$ip"                      "#"           
+    echo "#now proceed to attack      #"
+    echo "#############################"
+fi 
+
+
+if [ $save -eq 1 ]; then 
+    echo "enter the directory and name eg /home/user/Desktop/nameoffile.txt"
+    read directory
+    full_nmap="sudo nmap -oN $directpry -P -sV -Pn -A -O $ip --osscan-limit"
+    echo "#############################"
+    echo "#now you know everything you#"
+    echo "#need to know about         #"
+    echo "#$ip"                      "#"           
+    echo "#now proceed to attack      #"
+    echo "#############################"
+fi
